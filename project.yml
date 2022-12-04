@@ -1,10 +1,10 @@
+environment:
+  DATABASE_URL: ${DATABASE_URL}
 packages:
   - name: sample
-    environment:
-      DATABASE_URL: ${DATABASE_URL}
-    functions:
+    actions:
       - name: hello
-        runtime: python:default
+        runtime: "python:default"
         limits:
           timeout: 15000
           memory: 1024
